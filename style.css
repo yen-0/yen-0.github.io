@@ -2,6 +2,7 @@
     --primary-color: #00796b; /* Teal - Main accent */
     --primary-darker: #004d40; /* Darker Teal */
     --secondary-color: #1e88e5; /* Blue - Can be used for other accents */
+    --accent-color: #ffc107; /* Amber - for profile skills or accents */
     --light-bg: #f4f7f6; /* Very light grey for page background */
     --card-bg: #ffffff; /* White for cards */
     --text-color: #333333; /* Dark grey for text */
@@ -48,6 +49,136 @@ header .subtitle {
     padding: 0 20px;
 }
 
+/* === PROFILE SECTION STYLES === */
+.profile-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    margin-bottom: 50px; /* Increased margin to separate from projects */
+    overflow: hidden;
+}
+
+.profile-header {
+    padding: 25px 30px;
+    background-color: var(--primary-darker); /* Darker background for profile header */
+    color: white;
+    border-bottom: 1px solid var(--primary-darker);
+}
+
+.profile-header h2 {
+    font-family: var(--font-secondary);
+    font-size: 2em;
+    margin: 0 0 5px 0;
+}
+
+.profile-header .tagline {
+    font-size: 1.1em;
+    font-weight: 300;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.profile-content {
+    padding: 30px;
+}
+
+.profile-details p.profile-item {
+    font-size: 1.05em;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    display: flex; /* For aligning emoji and text */
+    align-items: center;
+}
+
+.profile-details p.profile-item .emoji-icon {
+    font-size: 1.3em;
+    margin-right: 10px;
+}
+
+.profile-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.profile-details a:hover {
+    text-decoration: underline;
+    color: var(--primary-darker);
+}
+
+.profile-connect, .profile-skills {
+    margin-top: 25px;
+}
+
+.profile-connect h3, .profile-skills h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.3em;
+    color: var(--primary-darker);
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-link {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: var(--accent-color); /* Using accent color for skills */
+    color: var(--text-color); /* Dark text on light accent */
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+/* === END PROFILE SECTION STYLES === */
+
+
+.projects-heading { /* Styling for the "My Awesome Projects" heading */
+    font-family: var(--font-secondary);
+    font-size: 2.2em;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px; /* Space after profile card */
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block; /* To make border only as wide as text */
+    position: relative; /* For centering hack if needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 .project-card {
     background-color: var(--card-bg);
     border-radius: 12px;
@@ -90,11 +221,9 @@ header .subtitle {
     font-weight: 500;
 }
 
-/* Use secondary color for PolySearch tech tags for variety */
 #polysearch .project-tech span {
     background-color: var(--secondary-color);
 }
-
 
 .project-content {
     display: flex;
@@ -171,7 +300,6 @@ header .subtitle {
     color: white;
 }
 
-/* Specific button colors for PolySearch if desired */
 #polysearch .btn {
     background-color: var(--secondary-color);
 }
@@ -187,7 +315,6 @@ header .subtitle {
     color: white;
 }
 
-
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -202,6 +329,12 @@ footer {
     header h1 {
         font-size: 2.2em;
     }
+    .projects-heading {
+        font-size: 1.8em;
+    }
+    .profile-header h2 {
+        font-size: 1.7em;
+    }
     .project-content {
         flex-direction: column; /* Stack description and media vertically */
     }
@@ -213,5 +346,13 @@ footer {
         margin: 10px auto;
         width: calc(100% - 40px); /* Full width buttons with padding */
         max-width: 250px;
+    }
+    .social-link {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+    .skill-tag {
+        padding: 5px 10px;
+        font-size: 0.85em;
     }
 }
