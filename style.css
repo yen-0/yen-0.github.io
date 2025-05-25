@@ -1,0 +1,217 @@
+:root {
+    --primary-color: #00796b; /* Teal - Main accent */
+    --primary-darker: #004d40; /* Darker Teal */
+    --secondary-color: #1e88e5; /* Blue - Can be used for other accents */
+    --light-bg: #f4f7f6; /* Very light grey for page background */
+    --card-bg: #ffffff; /* White for cards */
+    --text-color: #333333; /* Dark grey for text */
+    --text-light: #555555; /* Lighter grey for secondary text */
+    --border-color: #e0e0e0; /* Light border color */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+header h1 {
+    margin: 0;
+    font-family: var(--font-secondary);
+    font-size: 2.8em;
+    font-weight: 600;
+}
+
+header .subtitle {
+    font-size: 1.1em;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    margin-bottom: 40px;
+    overflow: hidden; /* Ensures border-radius clips content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-header {
+    padding: 25px 30px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #f9f9f9; /* Slightly off-white for header */
+}
+
+.project-header h2 {
+    font-family: var(--font-secondary);
+    font-size: 1.8em;
+    color: var(--primary-darker);
+    margin: 0 0 10px 0;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tech span {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+/* Use secondary color for PolySearch tech tags for variety */
+#polysearch .project-tech span {
+    background-color: var(--secondary-color);
+}
+
+
+.project-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 30px;
+    gap: 30px; /* Space between description and media */
+}
+
+.project-description {
+    flex: 1; /* Takes up available space */
+    min-width: 300px; /* Ensures it doesn't get too squished */
+}
+
+.project-description p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.project-description p:last-child {
+    margin-bottom: 0;
+}
+
+.project-media {
+    flex: 1; /* Takes up available space */
+    min-width: 300px;
+    display: flex;
+    flex-direction: column; /* Stack images vertically if multiple */
+    gap: 15px; /* Space between images */
+    align-items: center; /* Center images if they are narrower than container */
+}
+
+.project-media img,
+.project-media iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.project-links {
+    padding: 20px 30px;
+    background-color: #fdfdfd;
+    border-top: 1px solid var(--border-color);
+    text-align: right; /* Aligns buttons to the right */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background-color: var(--primary-darker);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Specific button colors for PolySearch if desired */
+#polysearch .btn {
+    background-color: var(--secondary-color);
+}
+#polysearch .btn:hover {
+    background-color: #1565c0; /* Darker blue */
+}
+#polysearch .btn-secondary {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+#polysearch .btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    background-color: var(--text-color);
+    color: #f0f0f0;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    .project-content {
+        flex-direction: column; /* Stack description and media vertically */
+    }
+    .project-links {
+        text-align: center;
+    }
+    .btn {
+        display: block;
+        margin: 10px auto;
+        width: calc(100% - 40px); /* Full width buttons with padding */
+        max-width: 250px;
+    }
+}
