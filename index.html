@@ -1,7 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>My Awesome Projects</h1>
+        <p class="subtitle">A showcase of my work and passion.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- === HANGLY PROJECT SECTION === -->
+        <section class="project-card" id="hangly">
+            <div class="project-header">
+                <h2>Hangly</h2>
+                <div class="project-tech">
+                    <span>Next.js</span>
+                    <span>Firebase</span>
+                    <span>React</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-description">
+                    <p>This application provides a comprehensive solution for managing personal calendar events, creating custom "stamps" for recurring activities, and facilitating group scheduling through a unique "Hangout Request" feature. Users can visually organize their time, define reusable event templates (stamps), and easily find common availability with friends or colleagues.</p>
+                    <p>Built with Next.js and Firebase, this app offers a modern, responsive user experience with real-time data synchronization and robust authentication.</p>
+                </div>
+                <div class="project-media">
+                    <!-- Replace with your images/videos -->
+                    <img src="https://via.placeholder.com/400x250/00796b/ffffff?text=Hangly+Screenshot+1" alt="Hangly Screenshot 1">
+                    <img src="https://via.placeholder.com/400x250/004d40/ffffff?text=Hangly+Screenshot+2" alt="Hangly Screenshot 2">
+                    <!-- Add more images if needed -->
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="#your-hangly-live-link" class="btn" target="_blank" rel="noopener noreferrer">View Live App</a>
+                <a href="#your-hangly-repo-link" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Source Code</a>
+            </div>
+        </section>
+        <!-- === END HANGLY PROJECT SECTION === -->
+
+        <!-- === POLYSEARCH PROJECT SECTION === -->
+        <section class="project-card" id="polysearch">
+            <div class="project-header">
+                <h2>PolySearch</h2>
+                <div class="project-tech">
+                    <span>JavaScript</span>
+                    <span>Chrome Extension</span>
+                    <span>Web APIs</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-description">
+                    <p>Enhance Google Search by adding a button to re-search in your favorite languages. This Chrome extension seamlessly integrates into the Google Search results page, allowing users to quickly perform the same search query in different languages with a single click. It's a handy tool for multilingual users, researchers, or anyone looking to explore search results from different linguistic perspectives.</p>
+                </div>
+                <div class="project-media">
+                    <!-- Replace with your images/videos -->
+                    <img src="https://via.placeholder.com/400x250/1e88e5/ffffff?text=PolySearch+UI" alt="PolySearch UI">
+                    <!-- You can add more images or even an embedded video here -->
+                    <!-- <iframe width="400" height="250" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe> -->
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="#your-polysearch-store-link" class="btn" target="_blank" rel="noopener noreferrer">Get Extension</a>
+                <a href="#your-polysearch-repo-link" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Source Code</a>
+            </div>
+        </section>
+        <!-- === END POLYSEARCH PROJECT SECTION === -->
+
+        <!--
+        === TEMPLATE FOR NEW PROJECT SECTION ===
+        To add a new project, copy and paste the block below,
+        then update the content, IDs, links, and images.
+
+        <section class="project-card" id="new-project-id">
+            <div class="project-header">
+                <h2>New Project Title</h2>
+                <div class="project-tech">
+                    <span>Tech 1</span>
+                    <span>Tech 2</span>
+                    <span>Tech 3</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-description">
+                    <p>Description paragraph 1 for your new project. Explain what it does and its purpose.</p>
+                    <p>Description paragraph 2 highlighting key features or challenges overcome.</p>
+                </div>
+                <div class="project-media">
+                    <img src="https://via.placeholder.com/400x250/yourcolor/ffffff?text=New+Project+Image" alt="New Project Image">
+                </div>
+            </div>
+            <div class="project-links">
+                <a href="#live-link" class="btn" target="_blank" rel="noopener noreferrer">View Live</a>
+                <a href="#repo-link" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
+        </section>
+        === END TEMPLATE FOR NEW PROJECT SECTION ===
+        -->
+
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> Your Name. All rights reserved.</p>
+        <!-- You can add links to your social media or GitHub here -->
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
